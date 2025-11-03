@@ -1,0 +1,19 @@
+#services: define os servicos(tecnologias) que estao presentes na aplicacao. Ex: node, postgres, redis
+services:
+  node:
+    #image: define a 
+    image: vehicles
+
+    # build: define o caminho que o docker ira buildar no container
+    build: ./
+
+    #ports: define as portas de rede que o window e o docker vao usar
+    ports: 
+      - 3000:3000
+
+    #env_file: define qual o arquivo que carrega as variaveis de ambiente da aplicacao
+    env_file:
+      - ./.env
+
+    #constainer_name: define o nome do container
+    container_name: veiculos  
