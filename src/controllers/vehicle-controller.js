@@ -10,7 +10,7 @@ export const getAllVehicles = async (req, res) => {
 			return res.status(404).json({ message: 'Data not found' });
 		}
 
-		return res.status(200).json(data);
+		return res.status(200).json(data.vehicles);
 	} catch (error) {
 		return res.status(500).json({ error: 'Could not fetch data' });
 	}
@@ -91,8 +91,6 @@ export const deleteVehicle = async (req, res) => {
 		if (!data) {
 			return res.status(404).json({ message: 'Vehicle not found' });
 		}
-
-		dat
 
 		res.status(204).json(data);
 	} catch (error) {

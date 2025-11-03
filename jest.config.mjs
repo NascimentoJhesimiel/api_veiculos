@@ -17,6 +17,26 @@ const config = {
 	// Automatically clear mock calls, instances, contexts and results before every test
 	clearMocks: true,
 
+	// Enable ES Module support
+	transform: {},
+
+	// Test directories
+	testMatch: [
+		"<rootDir>/tests/**/*.spec.js",
+		"<rootDir>/tests/**/*.test.js"
+	],
+
+	// Coverage configuration
+	collectCoverageFrom: [
+		"src/**/*.js",
+		"!src/server.js",
+		"!src/**/*.spec.js",
+		"!src/**/*.test.js"
+	],
+
+	coverageDirectory: "coverage",
+	coverageReporters: ["text", "lcov", "html"],
+
 	// Indicates whether the coverage information should be collected while executing the test
 	collectCoverage: true,
 
