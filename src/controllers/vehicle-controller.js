@@ -92,7 +92,7 @@ export const deleteVehicle = async (req, res) => {
 			return res.status(404).json({ message: 'Vehicle not found' });
 		}
 
-		res.status(204).json(data);
+		res.status(204);
 	} catch (error) {
 		return res.status(500).json({ message: 'Error deleting vehicle' });
 	}
