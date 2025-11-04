@@ -1,0 +1,16 @@
+meta {
+  name: get-all-vehicles
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/vehicles
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
