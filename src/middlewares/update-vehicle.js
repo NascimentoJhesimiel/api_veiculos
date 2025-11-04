@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { vehicleSchema } from './create-vehicle.js';
+import { vehicleSchema } from '../entities/vehicle.js';
 
 export const ValidateUpdateVehicle = (req, res, next) => {
 	const result = vehicleSchema.safeParse(req.body);

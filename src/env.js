@@ -4,7 +4,13 @@ dotenv.config();
 
 export const env = (varenv) => {
 	const variable = process.env[varenv];
-	const allowedVars = ['DATABASE_URL', 'API_KEY', 'PORT', 'NODE_ENV'];
+	const allowedVars = [
+		'DATABASE_URL',
+		'API_KEY',
+		'PORT',
+		'NODE_ENV',
+		'JWT_TOKEN',
+	];
 
 	if (typeof varenv !== 'string' || varenv.trim() === '') {
 		throw new Error('Invalid environment variable name');
