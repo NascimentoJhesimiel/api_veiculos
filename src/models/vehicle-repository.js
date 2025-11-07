@@ -1,10 +1,9 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { URL } from 'node:url';
 
-const __filename = fileURLToPath(import.meta.url);
+const __filename = new URL('../db/vehicle.json');
 const __dirname = path.dirname(__filename);
-const encoding = 'utf-8';
 
 export class VehicleRepository {
 	constructor() {

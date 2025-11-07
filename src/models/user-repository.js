@@ -1,7 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { URL } from 'node:url';
-import { th } from 'zod/locales';
 
 const __filename = new URL('../db/users.json');
 const __dirname = path.dirname(__filename);
