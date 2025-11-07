@@ -26,7 +26,6 @@ export const getVehicleById = async (req, res) => {
 
 		const data = await db.read();
 
-		// 🔧 FIX: Verifica se data.vehicles existe
 		if (!data || !data.vehicles || !Array.isArray(data.vehicles)) {
 			return res.status(404).json({ error: 'No vehicles data found' });
 		}
